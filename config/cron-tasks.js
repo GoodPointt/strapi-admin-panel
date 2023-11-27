@@ -4,7 +4,7 @@ module.exports = {
       console.log("🐇 Wake up, Neo!");
     },
     options: {
-      rule: "*/14 * * * *",
+      rule: "*/1 * * * *",
     },
   },
 };
