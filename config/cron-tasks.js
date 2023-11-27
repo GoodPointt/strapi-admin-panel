@@ -1,10 +1,18 @@
+const { STRAPI_URL } = process.env;
+const axios = require("axios");
+
 module.exports = {
   myJob: {
-    task: ({ strapi }) => {
-      console.log("🐇 Wake up, Neo!");
+    task: async ({ strapi }) => {
+      try {
+        const response = await axios.get(STRAPI_URL + "/api/cases");
+        if (response) console.log("🐇 Wake up, Neo...");
+      } catch (error) {
+        console.error("❌ Waking up Error!", error);
+      }
     },
     options: {
-      rule: "*/1 * * * *",
+      rule: "*/14 * * * *",
     },
   },
 };
