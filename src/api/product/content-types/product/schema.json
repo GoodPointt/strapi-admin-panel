@@ -108,6 +108,14 @@
         }
       },
       "type": "string"
+    },
+    "uid": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "integer"
     }
   }
 }
